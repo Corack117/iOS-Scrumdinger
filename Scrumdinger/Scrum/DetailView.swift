@@ -15,7 +15,7 @@ struct DetailView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Informaciñon de la Meet")) {
+            Section(header: Text("Información de la Meet")) {
                 NavigationLink(destination: MeetingView()) {
                     Label("Iniciar Meet", systemImage: "timer")
                         .font(.headline)
@@ -24,11 +24,11 @@ struct DetailView: View {
                 HStack {
                     Label("Longitud", systemImage: "clock")
                     Spacer()
-                    Text("\(scrum.lengthInMinutes) minutes")
+                    Text("\(scrum.lengthInMinutes) minutos")
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
-                    Label("Tems", systemImage: "paintpalette")
+                    Label("Tema", systemImage: "paintpalette")
                     Spacer()
                     Text(scrum.theme.name)
                         .padding(4)
