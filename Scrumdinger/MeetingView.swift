@@ -1,52 +1,43 @@
 //
-//  ContentView.swift
+//  MeetingView.swift
 //  Scrumdinger
 //
-//  Created by Sergio Ordaz Romero on 14/08/22.
+//  Created by Sergio Ordaz Romero on 16/08/22.
 //
 
 import SwiftUI
 
 struct MeetingView: View {
+    @Binding var scrum: DailyScrum
+    
     var body: some View {
-        VStack {
-            ProgressView(value: 5, total: 15)
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Tiempo transcurrido")
-                        .font(.caption)
-                    Label("300", systemImage: "hourglass.bottomhalf.fill")
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(scrum.theme.mainColor)
+            VStack {
+                MeetingHeaderView(secondsElapsed: 60, secondsRemaining: 100, theme: scrum.theme)
+                
+                Circle()
+                    .strokeBorder(lineWidth: 24)
+                
+                HStack {
+                    Text("Hablante 1 of 3")
+                    Spacer()
+                    Button(action: {}) {
+                        Image(systemName: "forward.fill")
+                    }
+                    .accessibilityLabel("Siguiente hablante")
                 }
-                Spacer()
-                VStack(alignment: .trailing) {
-                    Text("Tiempo faltante")
-                        .font(.caption)
-                    Label("600", systemImage: "hourglass.tophalf.fill")
-                }
-            }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Tiempo restante")
-            .accessibilityValue("10 minutos")
-            
-            Circle()
-                .strokeBorder(lineWidth: 24)
-            
-            HStack {
-                Text("Hablante 1 of 3")
-                Spacer()
-                Button(action: {}) {
-                    Image(systemName: "forward.fill")
-                }
-                .accessibilityLabel("Siguiente hablante")
             }
         }
         .padding()
+        .foregroundColor(scrum.theme.accentColor)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct MettingView_Previews: PreviewProvider {
+struct MeetingView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingView()
+        MeetingView(scrum: .constant(DailyScrum.sampleData[0]))
     }
 }

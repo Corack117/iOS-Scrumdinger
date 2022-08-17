@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct ScrumdingerApp: App {
     @State private var scrums = DailyScrum.sampleData
+    @StateObject var scrumTimer: ScrumTimer = ScrumTimer()
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ScrumsView(scrums: $scrums)
+                    .environmentObject(scrumTimer)
             }
         }
     }
