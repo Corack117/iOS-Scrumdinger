@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32A042028AE152600A7D2DB /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A041F28AE152600A7D2DB /* ScrumStore.swift */; };
 		B333582B28A99367006CB620 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333582A28A99367006CB620 /* ScrumdingerApp.swift */; };
 		B333582F28A99367006CB620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B333582E28A99367006CB620 /* Assets.xcassets */; };
 		B333583228A99367006CB620 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B333583128A99367006CB620 /* Preview Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B32A041F28AE152600A7D2DB /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
 		B333582728A99367006CB620 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B333582A28A99367006CB620 /* ScrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerApp.swift; sourceTree = "<group>"; };
 		B333582E28A99367006CB620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				B333583B28A99EE1006CB620 /* Theme.swift */,
 				B351187128AC2CB300AA4632 /* ScrumTimer.swift */,
 				B351188028ADE0DA00AA4632 /* History.swift */,
+				B32A041F28AE152600A7D2DB /* ScrumStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				B351187028AB362500AA4632 /* ThemePicker.swift in Sources */,
 				B333583E28A9A14F006CB620 /* DailyScrum.swift in Sources */,
 				B351187A28AD5DEC00AA4632 /* MeetingFooterView.swift in Sources */,
+				B32A042028AE152600A7D2DB /* ScrumStore.swift in Sources */,
 				B351187828AC530300AA4632 /* ScrumProgressViewStyle.swift in Sources */,
 				B333584628A9B748006CB620 /* DetailView.swift in Sources */,
 				B351186C28AB353900AA4632 /* DetailEditView.swift in Sources */,
